@@ -11,7 +11,7 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        CashMachine * cashMachine = [[CashMachine alloc] initWithDenominators: [NSSet setWithObjects: @3,@2,@1,nil]];
+        CashMachine * cashMachine = [[CashMachine alloc] initWithDenominators: [NSSet setWithObjects: @3,@2,nil]];
         NSLog(@"%@",[cashMachine getCash: 2]);
     }
     return 0;

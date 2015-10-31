@@ -32,7 +32,7 @@
 //
 - (int) sum: (NSArray*) notes {
     int s = 0;
-    for(int i = 0; i < (long long)[notes count] - 1; ++i) s += [notes[i] intValue] * [_denominations[i] intValue];
+    for(int i = 0; i < (long long)[notes count]; ++i) s += [notes[i] intValue] * [_denominations[i] intValue];
     return s;
 }
 
