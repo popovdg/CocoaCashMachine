@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CashMachine.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        CashMachine * cashMachine = [[CashMachine alloc] initWithDenominators: [NSSet setWithObjects: @50,@30,@20,@10,nil]];
+        NSLog(@"%@",[cashMachine getCash: 70]);
     }
     return 0;
 }
