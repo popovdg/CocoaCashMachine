@@ -18,12 +18,15 @@
 
 //
 - (void) setDenominations: (NSSet*) denominations {
-    _denominations = [[denominations allObjects]
+    _denominations = [[[denominations allObjects]
                        sortedArrayUsingDescriptors:
                        [NSArray arrayWithObject:
                         [NSSortDescriptor sortDescriptorWithKey: nil
                                                       ascending: NO
-                                                       selector: @selector(compare:)]]];
+                                                       selector: @selector(compare:)]]]
+                      filteredArrayUsingPredicate:
+                      [NSPredicate predicateWithBlock:
+                       ^BOOL(id evaluatedObject, NSDictionary *bindings) {return [evaluatedObject boolValue];}]];
 }
 
 //
@@ -35,12 +38,12 @@
 
 //
 - (void) calculateNotes: (NSMutableArray*) notes startIndex: (long long) s cash: (int) cash {
-    for(long long i = s; i < (long long)[notes count] - 1; ++i) {
-        [notes replaceObjectAtIndex: i withObject: @((cash - [self sum: notes]) / [_denominations[i] integerValue])];
+    for(long long i = s; i < (long long)[notes count]; ++i) {
+        [notes replaceObjectAtIndex: i withObject: @([notes[i] integerValue] + (cash - [self sum: notes]) / [_denominations[i] integerValue])];
         for(int j = [notes[i] intValue]; j >= 0; --j) {
             [notes replaceObjectAtIndex: i withObject: @(j)];
-            [self calculateNotes: notes startIndex: s + 1 cash: cash];
             if(!(cash - [self sum: notes])) result = [notes copy];
+            if(s + 1 < (long long) [notes count]) [self calculateNotes: notes startIndex: s + 1 cash: cash];
         }
     }
 }
