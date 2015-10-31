@@ -28,26 +28,30 @@
 
 //
 - (int) sum: (NSArray*) notes {
-    int s;
-    for(int i = 0; i < (long long)[notes count]; ++i) s += [notes[i] intValue] * [_denominations[i] intValue];
+    int s = 0;
+    for(int i = 0; i < (long long)[notes count] - 1; ++i) s += [notes[i] intValue] * [_denominations[i] intValue];
     return s;
 }
 
 //
-- (void) calculateNotes: (NSMutableArray*) notes startIndex: (long long) s remainder: (int) r {
-    for(long long i = s; i < (long long)[notes count] - 1; ++i)
+- (void) calculateNotes: (NSMutableArray*) notes startIndex: (long long) s cash: (int) cash {
+    for(long long i = s; i < (long long)[notes count] - 1; ++i) {
+        [notes replaceObjectAtIndex: i withObject: @((cash - [self sum: notes]) / [_denominations[i] integerValue])];
         for(int j = [notes[i] intValue]; j >= 0; --j) {
-            
-            //[self calculateNotes:notes startIndex: i + 1 remainder: r - [self sum: notes]];
+            [notes replaceObjectAtIndex: i withObject: @(j)];
+            [self calculateNotes: notes startIndex: s + 1 cash: cash];
+            if(!(cash - [self sum: notes])) result = [notes copy];
         }
+    }
 }
 
 //
 - (NSArray*) getCash: (int) cash {
     NSMutableArray* notes = [[NSMutableArray alloc] initWithCapacity: [_denominations count]];
-    for (unsigned long i = 0; i < (unsigned long)[_denominations count]; ++i) [notes addObject: @0];
-    [self calculateNotes: notes startIndex: 0 remainder: cash];
-    return notes;
+    for(unsigned long i = 0; i < (unsigned long)[_denominations count]; ++i) [notes addObject: @0];
+    [self calculateNotes: notes startIndex: 0 cash: cash];
+    if([self sum: result] == cash) return result;
+    else return nil;
 }
 
 @end

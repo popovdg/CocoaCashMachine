@@ -13,10 +13,14 @@
 #import <Foundation/NSArray.h>
 
 /** Interface of a cash machine. */
-@interface CashMachine : NSObject {NSArray* _denominations; /**< array of denominations */}
+@interface CashMachine : NSObject {
+    NSArray* _denominations; /**< array of denominations */
+    NSArray* result; /**< array of notes */
+}
+
 - (id) initWithDenominators: (NSSet*) denominations;
 - (void) setDenominations: (NSSet*) denominations;
-- (void) calculateNotes: (NSMutableArray*) notes startIndex: (long long) s remainder: (int) r;
+- (void) calculateNotes: (NSMutableArray*) notes startIndex: (long long) s cash: (int) cash;
 - (int) sum: (NSArray*) notes;
 - (NSArray*) getCash: (int) cash;
 @end
