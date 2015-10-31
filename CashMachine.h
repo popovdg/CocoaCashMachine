@@ -22,6 +22,7 @@
 - (void) setDenominations: (NSSet*) denominations;
 - (void) calculateNotes: (NSMutableArray*) notes startIndex: (long long) s cash: (int) cash;
 - (int) sum: (NSArray*) notes;
+- (void) updateResult: (NSArray*) notes;
 - (NSArray*) getCash: (int) cash;
 @end
 

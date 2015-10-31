@@ -37,13 +37,36 @@
 }
 
 //
+- (void) updateResult: (NSArray*) notes {
+    int notesCount = 0;
+    int resultCount = 0;
+    int notesDenominations = 0;
+    int resultDenominations = 0;
+    
+    for(long long i = 0; i < (long long)[notes count]; ++i)
+        if([notes[i] boolValue]) {
+            ++notesDenominations;
+            notesCount += [notes[i] intValue];
+        }
+
+    for(long long i = 0; i < (long long)[result count]; ++i)
+        if([result[i] boolValue]) {
+            ++resultDenominations;
+            resultCount += [result[i] intValue];
+        }
+
+    if(notesDenominations > resultDenominations ||
+       (notesDenominations == resultDenominations && (!resultCount || notesCount < resultCount))) result = [notes copy];
+}
+
+//
 - (void) calculateNotes: (NSMutableArray*) notes startIndex: (long long) s cash: (int) cash {
     for(long long i = s; i < (long long)[notes count]; ++i) {
         [notes replaceObjectAtIndex: i withObject: @([notes[i] integerValue] + (cash - [self sum: notes]) / [_denominations[i] integerValue])];
         for(int j = [notes[i] intValue]; j >= 0; --j) {
             [notes replaceObjectAtIndex: i withObject: @(j)];
-            if(!(cash - [self sum: notes])) result = [notes copy];
             if(s + 1 < (long long) [notes count]) [self calculateNotes: notes startIndex: s + 1 cash: cash];
+            if(!(cash - [self sum: notes])) [self updateResult: notes];
         }
     }
 }
