@@ -32,7 +32,7 @@
 //Calculates the sum of money
 - (int) sum: (NSArray*) notes {
     int s = 0;
-    for(int i = 0; i < (long long)[notes count]; ++i) s += [notes[i] intValue] * [_denominations[i] intValue];
+    if([notes count] == [_denominations count]) for(int i = 0; i < (long long)[notes count]; ++i) s += [notes[i] intValue] * [_denominations[i] intValue];
     return s;
 }
 
