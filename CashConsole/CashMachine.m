@@ -73,6 +73,7 @@
 
 //
 - (NSArray*) getCash: (int) cash {
+    result = nil;
     NSMutableArray* notes = [[NSMutableArray alloc] initWithCapacity: [_denominations count]];
     for(unsigned long i = 0; i < (unsigned long)[_denominations count]; ++i) [notes addObject: @0];
     [self calculateNotes: notes startIndex: 0 cash: cash];
