@@ -10,13 +10,13 @@
 
 @implementation CashMachine
 
-//
+//Initialize with array of values
 - (id)initWithDenominators: (NSSet*) denominations {
     if(self = [super init]) [self setDenominations: denominations];
     return self;
 }
 
-//
+//Set values
 - (void) setDenominations: (NSSet*) denominations {
     _denominations = [[[denominations allObjects]
                        sortedArrayUsingDescriptors:
@@ -29,14 +29,14 @@
                        ^BOOL(id evaluatedObject, NSDictionary *bindings) {return [evaluatedObject boolValue];}]];
 }
 
-//
+//Calculates the sum of money
 - (int) sum: (NSArray*) notes {
     int s = 0;
     for(int i = 0; i < (long long)[notes count]; ++i) s += [notes[i] intValue] * [_denominations[i] intValue];
     return s;
 }
 
-//
+//Save result if it better meets the conditions
 - (void) updateResult: (NSArray*) notes {
     int notesCount = 0;
     int resultCount = 0;
@@ -59,19 +59,19 @@
        (notesDenominations == resultDenominations && (!resultCount || notesCount < resultCount))) result = [notes copy];
 }
 
-//
+//Calculate bank notes to be ejected and save to 'result'
 - (void) calculateNotes: (NSMutableArray*) notes startIndex: (long long) s cash: (int) cash {
     for(long long i = s; i < (long long)[notes count]; ++i) {
         [notes replaceObjectAtIndex: i withObject: @([notes[i] integerValue] + (cash - [self sum: notes]) / [_denominations[i] integerValue])];
         for(int j = [notes[i] intValue]; j >= 0; --j) {
             [notes replaceObjectAtIndex: i withObject: @(j)];
-            if(s + 1 < (long long) [notes count]) [self calculateNotes: notes startIndex: s + 1 cash: cash];
             if(!(cash - [self sum: notes])) [self updateResult: notes];
+            if(s + 1 < (long long) [notes count]) [self calculateNotes: notes startIndex: s + 1 cash: cash];
         }
     }
 }
 
-//
+//Returns result if possible
 - (NSArray*) getCash: (int) cash {
     result = nil;
     NSMutableArray* notes = [[NSMutableArray alloc] initWithCapacity: [_denominations count]];
