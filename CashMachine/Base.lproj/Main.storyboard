@@ -194,6 +194,9 @@
                                                     <accessibility identifier="cash"/>
                                                 </textFieldCell>
                                                 <accessibility identifier="cash"/>
+                                                <connections>
+                                                    <action selector="getCash:" target="XfG-lQ-9wD" id="mRo-Yp-JqY"/>
+                                                </connections>
                                             </textField>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" placeholderIntrinsicWidth="9" placeholderIntrinsicHeight="17" translatesAutoresizingMaskIntoConstraints="NO" id="1os-rf-Qnx">
                                                 <rect key="frame" x="155" y="0.0" width="13" height="17"/>

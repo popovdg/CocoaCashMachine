@@ -25,8 +25,12 @@
 }
 
 - (IBAction)getCash:(id)sender {
+    if(![[self.valuesField stringValue] length]) return;
+    if(!([[self.cashField stringValue] length] && [self.cashField intValue])) return;
     NSSet* values = [[NSSet alloc] initWithArray: [[self.valuesField stringValue] componentsSeparatedByString:@" "]];
-    //for(id item in values);
+    for(id item in values) if(![item isKindOfClass:[NSNumber class]]) return;
+    CashMachine* cashMachine = [[CashMachine alloc] initWithDenominators: values];
+    [cashMachine getCash: [self.cashField intValue]];
 }
 
 - (void)controlTextDidChange:(NSNotification *)notification {
