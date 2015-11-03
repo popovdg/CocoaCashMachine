@@ -43,6 +43,7 @@
  Calculates the sum of money
  @param notes numbers of bank notes
  @returns sum the sum of money
+ @retval 0 the size of 'notes' does not match the size of '_denominations'
  */
 - (int) sum: (NSArray*) notes;
 

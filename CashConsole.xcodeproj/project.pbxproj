@@ -27,7 +27,7 @@
 		047B0CD31BE29F5600F30F67 /* CashConsole */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CashConsole; sourceTree = BUILT_PRODUCTS_DIR; };
 		047B0CD61BE29F5600F30F67 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		047B0CE01BE2A21E00F30F67 /* CashMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CashMachine.m; path = CashConsole/CashMachine.m; sourceTree = "<group>"; };
-		047B0CE21BE2AA3500F30F67 /* CashMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CashMachine.h; sourceTree = "<group>"; };
+		04F7D8231BE8F16F002E1AA5 /* CashMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CashMachine.h; path = CashConsole/CashMachine.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +44,7 @@
 		047B0CCA1BE29F5400F30F67 = {
 			isa = PBXGroup;
 			children = (
-				047B0CE21BE2AA3500F30F67 /* CashMachine.h */,
+				04F7D8231BE8F16F002E1AA5 /* CashMachine.h */,
 				047B0CE01BE2A21E00F30F67 /* CashMachine.m */,
 				047B0CD51BE29F5600F30F67 /* CashConsole */,
 				047B0CD41BE29F5600F30F67 /* Products */,
@@ -243,6 +243,7 @@
 				047B0CDC1BE29F5600F30F67 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

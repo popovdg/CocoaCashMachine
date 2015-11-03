@@ -32,7 +32,8 @@
 //Calculates the sum of money
 - (int) sum: (NSArray*) notes {
     int s = 0;
-    if([notes count] == [_denominations count]) for(int i = 0; i < (long long)[notes count]; ++i) s += [notes[i] intValue] * [_denominations[i] intValue];
+    if([notes count] == [_denominations count])
+        for(int i = 0; i < (long long)[notes count]; ++i) s += [notes[i] intValue] * [_denominations[i] intValue];
     return s;
 }
 
@@ -48,7 +49,6 @@
             ++notesDenominations;
             notesCount += [notes[i] intValue];
         }
-
     for(long long i = 0; i < (long long)[result count]; ++i)
         if([result[i] boolValue]) {
             ++resultDenominations;
@@ -56,7 +56,8 @@
         }
 
     if(notesDenominations > resultDenominations ||
-       (notesDenominations == resultDenominations && (!resultCount || notesCount < resultCount))) result = [notes copy];
+       (notesDenominations == resultDenominations &&
+        (!resultCount || notesCount < resultCount))) result = [notes copy];
 }
 
 //Calculate bank notes to be ejected and save to 'result'
