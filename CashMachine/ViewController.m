@@ -24,6 +24,11 @@
     // Update the view, if already loaded.
 }
 
+- (IBAction)getCash:(id)sender {
+    NSSet* values = [[NSSet alloc] initWithArray: [[self.valuesField stringValue] componentsSeparatedByString:@" "]];
+    //for(id item in values);
+}
+
 - (void)controlTextDidChange:(NSNotification *)notification {
     [self.getCashButton setEnabled: [self.cashField intValue]];
 }

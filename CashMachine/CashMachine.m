@@ -18,15 +18,19 @@
 
 //Set values
 - (void) setDenominations: (NSSet*) denominations {
-    _denominations = [[[denominations allObjects]
-                       sortedArrayUsingDescriptors:
-                       [NSArray arrayWithObject:
-                        [NSSortDescriptor sortDescriptorWithKey: nil
-                                                      ascending: NO
-                                                       selector: @selector(compare:)]]]
-                      filteredArrayUsingPredicate:
-                      [NSPredicate predicateWithBlock:
-                       ^BOOL(id evaluatedObject, NSDictionary *bindings) {return [evaluatedObject boolValue];}]];
+    _denominations = [[[[denominations allObjects]
+                        filteredArrayUsingPredicate:
+                        [NSPredicate predicateWithFormat:@"self isKindOfClass: %@", [NSNumber class]]]
+                       
+                       filteredArrayUsingPredicate:
+                       [NSPredicate predicateWithBlock:
+                        ^BOOL(id evaluatedObject, NSDictionary *bindings) {return [evaluatedObject boolValue];}]]
+                      
+                      sortedArrayUsingDescriptors:
+                      [NSArray arrayWithObject:
+                       [NSSortDescriptor sortDescriptorWithKey: nil
+                                                     ascending: NO
+                                                      selector: @selector(compare:)]]];
 }
 
 //Calculates the sum of money

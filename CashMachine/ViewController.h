@@ -12,6 +12,7 @@
 @property (weak) IBOutlet NSButtonCell *getCashButton;
 @property (weak) IBOutlet NSTextField *cashField;
 @property (weak) IBOutlet NSTextField *valuesField;
+- (IBAction)getCash:(id)sender;
 - (void)controlTextDidChange:(NSNotification *)notification;
 @end
 
