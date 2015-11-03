@@ -62,12 +62,13 @@
 
 //Calculate bank notes to be ejected and save to 'result'
 - (void) calculateNotes: (NSMutableArray*) notes startIndex: (long long) s cash: (int) cash {
-    for(long long i = s; i < (long long)[notes count]; ++i) {
-        [notes replaceObjectAtIndex: i withObject: @([notes[i] integerValue] + (cash - [self sum: notes]) / [_denominations[i] integerValue])];
-        for(int j = [notes[i] intValue]; j >= 0; --j) {
-            [notes replaceObjectAtIndex: i withObject: @(j)];
-            if(!(cash - [self sum: notes])) [self updateResult: notes];
-            if(s + 1 < (long long) [notes count]) [self calculateNotes: notes startIndex: s + 1 cash: cash];
+    if([notes count] == [_denominations count])
+        for(long long i = s; i < (long long)[notes count]; ++i) {
+            [notes replaceObjectAtIndex: i withObject: @([notes[i] integerValue] + (cash - [self sum: notes]) / [_denominations[i] integerValue])];
+            for(int j = [notes[i] intValue]; j >= 0; --j) {
+                [notes replaceObjectAtIndex: i withObject: @(j)];
+                if(!(cash - [self sum: notes])) [self updateResult: notes];
+                if(s + 1 < (long long) [notes count]) [self calculateNotes: notes startIndex: s + 1 cash: cash];
         }
     }
 }
