@@ -1,5 +1,5 @@
 //
-//  main.m
+//  ViewController.h
 //  CashMachine
 //
 //  Created by popov on 03.11.15.
@@ -8,6 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 
-int main(int argc, const char * argv[]) {
-    return NSApplicationMain(argc, argv);
-}
+@interface ViewController : NSViewController
+
+
+@end
+

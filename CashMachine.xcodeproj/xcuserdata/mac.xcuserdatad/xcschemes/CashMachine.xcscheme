@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "04967BD61BE8F9DF009D4D6A"
-               BuildableName = "CashMachine"
+               BlueprintIdentifier = "04967BEC1BE8FD83009D4D6A"
+               BuildableName = "CashMachine.app"
                BlueprintName = "CashMachine"
                ReferencedContainer = "container:CashMachine.xcodeproj">
             </BuildableReference>
@@ -28,12 +28,22 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "04967C051BE8FD84009D4D6A"
+               BuildableName = "CashMachineTests.xctest"
+               BlueprintName = "CashMachineTests"
+               ReferencedContainer = "container:CashMachine.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "04967BD61BE8F9DF009D4D6A"
-            BuildableName = "CashMachine"
+            BlueprintIdentifier = "04967BEC1BE8FD83009D4D6A"
+            BuildableName = "CashMachine.app"
             BlueprintName = "CashMachine"
             ReferencedContainer = "container:CashMachine.xcodeproj">
          </BuildableReference>
@@ -55,8 +65,8 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "04967BD61BE8F9DF009D4D6A"
-            BuildableName = "CashMachine"
+            BlueprintIdentifier = "04967BEC1BE8FD83009D4D6A"
+            BuildableName = "CashMachine.app"
             BlueprintName = "CashMachine"
             ReferencedContainer = "container:CashMachine.xcodeproj">
          </BuildableReference>
@@ -74,8 +84,8 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "04967BD61BE8F9DF009D4D6A"
-            BuildableName = "CashMachine"
+            BlueprintIdentifier = "04967BEC1BE8FD83009D4D6A"
+            BuildableName = "CashMachine.app"
             BlueprintName = "CashMachine"
             ReferencedContainer = "container:CashMachine.xcodeproj">
          </BuildableReference>

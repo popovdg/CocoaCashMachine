@@ -7,31 +7,53 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04967BDB1BE8F9DF009D4D6A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04967BDA1BE8F9DF009D4D6A /* main.m */; };
-		04967BE31BE8FAB3009D4D6A /* CashMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = 04967BE21BE8FAB3009D4D6A /* CashMachine.m */; };
+		04967BF21BE8FD83009D4D6A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04967BF11BE8FD83009D4D6A /* AppDelegate.m */; };
+		04967BF51BE8FD83009D4D6A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04967BF41BE8FD83009D4D6A /* main.m */; };
+		04967BF81BE8FD83009D4D6A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04967BF71BE8FD83009D4D6A /* ViewController.m */; };
+		04967BFB1BE8FD83009D4D6A /* CashMachine.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04967BF91BE8FD83009D4D6A /* CashMachine.xcdatamodeld */; };
+		04967BFD1BE8FD84009D4D6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04967BFC1BE8FD84009D4D6A /* Assets.xcassets */; };
+		04967C001BE8FD84009D4D6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04967BFE1BE8FD84009D4D6A /* Main.storyboard */; };
+		04967C0B1BE8FD84009D4D6A /* CashMachineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04967C0A1BE8FD84009D4D6A /* CashMachineTests.m */; };
+		04967C171BE8FEE9009D4D6A /* CashMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = 04967C161BE8FEE9009D4D6A /* CashMachine.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		04967BD51BE8F9DF009D4D6A /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
+/* Begin PBXContainerItemProxy section */
+		04967C071BE8FD84009D4D6A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04967BE51BE8FD83009D4D6A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04967BEC1BE8FD83009D4D6A;
+			remoteInfo = CashMachine;
 		};
-/* End PBXCopyFilesBuildPhase section */
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		04967BD71BE8F9DF009D4D6A /* CashMachine */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CashMachine; sourceTree = BUILT_PRODUCTS_DIR; };
-		04967BDA1BE8F9DF009D4D6A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		04967BE11BE8FAB3009D4D6A /* CashMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CashMachine.h; path = CashMachine/CashMachine.h; sourceTree = "<group>"; };
-		04967BE21BE8FAB3009D4D6A /* CashMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CashMachine.m; path = CashMachine/CashMachine.m; sourceTree = "<group>"; };
+		04967BED1BE8FD83009D4D6A /* CashMachine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CashMachine.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		04967BF01BE8FD83009D4D6A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		04967BF11BE8FD83009D4D6A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		04967BF41BE8FD83009D4D6A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		04967BF61BE8FD83009D4D6A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		04967BF71BE8FD83009D4D6A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		04967BFA1BE8FD83009D4D6A /* CashMachine.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CashMachine.xcdatamodel; sourceTree = "<group>"; };
+		04967BFC1BE8FD84009D4D6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04967BFF1BE8FD84009D4D6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		04967C011BE8FD84009D4D6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04967C061BE8FD84009D4D6A /* CashMachineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CashMachineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04967C0A1BE8FD84009D4D6A /* CashMachineTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CashMachineTests.m; sourceTree = "<group>"; };
+		04967C0C1BE8FD84009D4D6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04967C151BE8FEE9009D4D6A /* CashMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CashMachine.h; path = CashMachine/CashMachine.h; sourceTree = "<group>"; };
+		04967C161BE8FEE9009D4D6A /* CashMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CashMachine.m; path = CashMachine/CashMachine.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		04967BD41BE8F9DF009D4D6A /* Frameworks */ = {
+		04967BEA1BE8FD83009D4D6A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04967C031BE8FD84009D4D6A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,42 +63,69 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		04967BCE1BE8F9DF009D4D6A = {
+		04967BE41BE8FD83009D4D6A = {
 			isa = PBXGroup;
 			children = (
-				04967BE11BE8FAB3009D4D6A /* CashMachine.h */,
-				04967BE21BE8FAB3009D4D6A /* CashMachine.m */,
-				04967BD91BE8F9DF009D4D6A /* CashMachine */,
-				04967BD81BE8F9DF009D4D6A /* Products */,
+				04967C151BE8FEE9009D4D6A /* CashMachine.h */,
+				04967C161BE8FEE9009D4D6A /* CashMachine.m */,
+				04967BEF1BE8FD83009D4D6A /* CashMachine */,
+				04967C091BE8FD84009D4D6A /* CashMachineTests */,
+				04967BEE1BE8FD83009D4D6A /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		04967BD81BE8F9DF009D4D6A /* Products */ = {
+		04967BEE1BE8FD83009D4D6A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				04967BD71BE8F9DF009D4D6A /* CashMachine */,
+				04967BED1BE8FD83009D4D6A /* CashMachine.app */,
+				04967C061BE8FD84009D4D6A /* CashMachineTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		04967BD91BE8F9DF009D4D6A /* CashMachine */ = {
+		04967BEF1BE8FD83009D4D6A /* CashMachine */ = {
 			isa = PBXGroup;
 			children = (
-				04967BDA1BE8F9DF009D4D6A /* main.m */,
+				04967BF01BE8FD83009D4D6A /* AppDelegate.h */,
+				04967BF11BE8FD83009D4D6A /* AppDelegate.m */,
+				04967BF61BE8FD83009D4D6A /* ViewController.h */,
+				04967BF71BE8FD83009D4D6A /* ViewController.m */,
+				04967BFC1BE8FD84009D4D6A /* Assets.xcassets */,
+				04967BFE1BE8FD84009D4D6A /* Main.storyboard */,
+				04967C011BE8FD84009D4D6A /* Info.plist */,
+				04967BF91BE8FD83009D4D6A /* CashMachine.xcdatamodeld */,
+				04967BF31BE8FD83009D4D6A /* Supporting Files */,
 			);
 			path = CashMachine;
+			sourceTree = "<group>";
+		};
+		04967BF31BE8FD83009D4D6A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				04967BF41BE8FD83009D4D6A /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		04967C091BE8FD84009D4D6A /* CashMachineTests */ = {
+			isa = PBXGroup;
+			children = (
+				04967C0A1BE8FD84009D4D6A /* CashMachineTests.m */,
+				04967C0C1BE8FD84009D4D6A /* Info.plist */,
+			);
+			path = CashMachineTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		04967BD61BE8F9DF009D4D6A /* CashMachine */ = {
+		04967BEC1BE8FD83009D4D6A /* CashMachine */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 04967BDE1BE8F9DF009D4D6A /* Build configuration list for PBXNativeTarget "CashMachine" */;
+			buildConfigurationList = 04967C0F1BE8FD84009D4D6A /* Build configuration list for PBXNativeTarget "CashMachine" */;
 			buildPhases = (
-				04967BD31BE8F9DF009D4D6A /* Sources */,
-				04967BD41BE8F9DF009D4D6A /* Frameworks */,
-				04967BD51BE8F9DF009D4D6A /* CopyFiles */,
+				04967BE91BE8FD83009D4D6A /* Sources */,
+				04967BEA1BE8FD83009D4D6A /* Frameworks */,
+				04967BEB1BE8FD83009D4D6A /* Resources */,
 			);
 			buildRules = (
 			);
@@ -84,54 +133,127 @@
 			);
 			name = CashMachine;
 			productName = CashMachine;
-			productReference = 04967BD71BE8F9DF009D4D6A /* CashMachine */;
-			productType = "com.apple.product-type.tool";
+			productReference = 04967BED1BE8FD83009D4D6A /* CashMachine.app */;
+			productType = "com.apple.product-type.application";
+		};
+		04967C051BE8FD84009D4D6A /* CashMachineTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04967C121BE8FD84009D4D6A /* Build configuration list for PBXNativeTarget "CashMachineTests" */;
+			buildPhases = (
+				04967C021BE8FD84009D4D6A /* Sources */,
+				04967C031BE8FD84009D4D6A /* Frameworks */,
+				04967C041BE8FD84009D4D6A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04967C081BE8FD84009D4D6A /* PBXTargetDependency */,
+			);
+			name = CashMachineTests;
+			productName = CashMachineTests;
+			productReference = 04967C061BE8FD84009D4D6A /* CashMachineTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		04967BCF1BE8F9DF009D4D6A /* Project object */ = {
+		04967BE51BE8FD83009D4D6A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = popov;
 				TargetAttributes = {
-					04967BD61BE8F9DF009D4D6A = {
+					04967BEC1BE8FD83009D4D6A = {
 						CreatedOnToolsVersion = 7.1;
+					};
+					04967C051BE8FD84009D4D6A = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 04967BEC1BE8FD83009D4D6A;
 					};
 				};
 			};
-			buildConfigurationList = 04967BD21BE8F9DF009D4D6A /* Build configuration list for PBXProject "CashMachine" */;
+			buildConfigurationList = 04967BE81BE8FD83009D4D6A /* Build configuration list for PBXProject "CashMachine" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
-			mainGroup = 04967BCE1BE8F9DF009D4D6A;
-			productRefGroup = 04967BD81BE8F9DF009D4D6A /* Products */;
+			mainGroup = 04967BE41BE8FD83009D4D6A;
+			productRefGroup = 04967BEE1BE8FD83009D4D6A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				04967BD61BE8F9DF009D4D6A /* CashMachine */,
+				04967BEC1BE8FD83009D4D6A /* CashMachine */,
+				04967C051BE8FD84009D4D6A /* CashMachineTests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		04967BEB1BE8FD83009D4D6A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04967BFD1BE8FD84009D4D6A /* Assets.xcassets in Resources */,
+				04967C001BE8FD84009D4D6A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04967C041BE8FD84009D4D6A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		04967BD31BE8F9DF009D4D6A /* Sources */ = {
+		04967BE91BE8FD83009D4D6A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04967BE31BE8FAB3009D4D6A /* CashMachine.m in Sources */,
-				04967BDB1BE8F9DF009D4D6A /* main.m in Sources */,
+				04967BFB1BE8FD83009D4D6A /* CashMachine.xcdatamodeld in Sources */,
+				04967C171BE8FEE9009D4D6A /* CashMachine.m in Sources */,
+				04967BF81BE8FD83009D4D6A /* ViewController.m in Sources */,
+				04967BF51BE8FD83009D4D6A /* main.m in Sources */,
+				04967BF21BE8FD83009D4D6A /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04967C021BE8FD84009D4D6A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04967C0B1BE8FD84009D4D6A /* CashMachineTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		04967C081BE8FD84009D4D6A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04967BEC1BE8FD83009D4D6A /* CashMachine */;
+			targetProxy = 04967C071BE8FD84009D4D6A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		04967BFE1BE8FD84009D4D6A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04967BFF1BE8FD84009D4D6A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
-		04967BDC1BE8F9DF009D4D6A /* Debug */ = {
+		04967C0D1BE8FD84009D4D6A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -174,7 +296,7 @@
 			};
 			name = Debug;
 		};
-		04967BDD1BE8F9DF009D4D6A /* Release */ = {
+		04967C0E1BE8FD84009D4D6A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -210,42 +332,100 @@
 			};
 			name = Release;
 		};
-		04967BDF1BE8F9DF009D4D6A /* Debug */ = {
+		04967C101BE8FD84009D4D6A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CashMachine/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = popov.CashMachine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		04967BE01BE8F9DF009D4D6A /* Release */ = {
+		04967C111BE8FD84009D4D6A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CashMachine/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = popov.CashMachine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		04967C131BE8FD84009D4D6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CashMachineTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = popov.CashMachineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CashMachine.app/Contents/MacOS/CashMachine";
+			};
+			name = Debug;
+		};
+		04967C141BE8FD84009D4D6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CashMachineTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = popov.CashMachineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CashMachine.app/Contents/MacOS/CashMachine";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		04967BD21BE8F9DF009D4D6A /* Build configuration list for PBXProject "CashMachine" */ = {
+		04967BE81BE8FD83009D4D6A /* Build configuration list for PBXProject "CashMachine" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				04967BDC1BE8F9DF009D4D6A /* Debug */,
-				04967BDD1BE8F9DF009D4D6A /* Release */,
+				04967C0D1BE8FD84009D4D6A /* Debug */,
+				04967C0E1BE8FD84009D4D6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		04967BDE1BE8F9DF009D4D6A /* Build configuration list for PBXNativeTarget "CashMachine" */ = {
+		04967C0F1BE8FD84009D4D6A /* Build configuration list for PBXNativeTarget "CashMachine" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				04967BDF1BE8F9DF009D4D6A /* Debug */,
-				04967BE01BE8F9DF009D4D6A /* Release */,
+				04967C101BE8FD84009D4D6A /* Debug */,
+				04967C111BE8FD84009D4D6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04967C121BE8FD84009D4D6A /* Build configuration list for PBXNativeTarget "CashMachineTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04967C131BE8FD84009D4D6A /* Debug */,
+				04967C141BE8FD84009D4D6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		04967BF91BE8FD83009D4D6A /* CashMachine.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				04967BFA1BE8FD83009D4D6A /* CashMachine.xcdatamodel */,
+			);
+			currentVersion = 04967BFA1BE8FD83009D4D6A /* CashMachine.xcdatamodel */;
+			path = CashMachine.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
-	rootObject = 04967BCF1BE8F9DF009D4D6A /* Project object */;
+	rootObject = 04967BE51BE8FD83009D4D6A /* Project object */;
 }
