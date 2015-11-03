@@ -8,8 +8,10 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface ViewController : NSViewController
-
-
+@interface ViewController : NSViewController <NSTextFieldDelegate>
+@property (weak) IBOutlet NSButtonCell *getCashButton;
+@property (weak) IBOutlet NSTextField *cashField;
+@property (weak) IBOutlet NSTextField *valuesField;
+- (void)controlTextDidChange:(NSNotification *)notification;
 @end
 

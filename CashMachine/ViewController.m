@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "CashMachine.h"
 
 @implementation ViewController
 
@@ -14,6 +15,7 @@
     [super viewDidLoad];
 
     // Do any additional setup after loading the view.
+    [self.cashField setDelegate: self];
 }
 
 - (void)setRepresentedObject:(id)representedObject {
@@ -22,4 +24,7 @@
     // Update the view, if already loaded.
 }
 
+- (void)controlTextDidChange:(NSNotification *)notification {
+    [self.getCashButton setEnabled: [self.cashField intValue]];
+}
 @end
