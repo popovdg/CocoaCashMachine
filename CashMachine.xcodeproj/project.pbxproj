@@ -15,6 +15,7 @@
 		04967C001BE8FD84009D4D6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04967BFE1BE8FD84009D4D6A /* Main.storyboard */; };
 		04967C0B1BE8FD84009D4D6A /* CashMachineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04967C0A1BE8FD84009D4D6A /* CashMachineTests.m */; };
 		04967C171BE8FEE9009D4D6A /* CashMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = 04967C161BE8FEE9009D4D6A /* CashMachine.m */; };
+		04967C231BE95DA5009D4D6A /* CashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04967C221BE95DA5009D4D6A /* CashViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,8 +42,10 @@
 		04967C061BE8FD84009D4D6A /* CashMachineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CashMachineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04967C0A1BE8FD84009D4D6A /* CashMachineTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CashMachineTests.m; sourceTree = "<group>"; };
 		04967C0C1BE8FD84009D4D6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04967C151BE8FEE9009D4D6A /* CashMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CashMachine.h; path = CashMachine/CashMachine.h; sourceTree = "<group>"; };
-		04967C161BE8FEE9009D4D6A /* CashMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CashMachine.m; path = CashMachine/CashMachine.m; sourceTree = "<group>"; };
+		04967C151BE8FEE9009D4D6A /* CashMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CashMachine.h; sourceTree = "<group>"; };
+		04967C161BE8FEE9009D4D6A /* CashMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CashMachine.m; sourceTree = "<group>"; };
+		04967C211BE95DA5009D4D6A /* CashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CashViewController.h; sourceTree = "<group>"; };
+		04967C221BE95DA5009D4D6A /* CashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CashViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,8 +69,6 @@
 		04967BE41BE8FD83009D4D6A = {
 			isa = PBXGroup;
 			children = (
-				04967C151BE8FEE9009D4D6A /* CashMachine.h */,
-				04967C161BE8FEE9009D4D6A /* CashMachine.m */,
 				04967BEF1BE8FD83009D4D6A /* CashMachine */,
 				04967C091BE8FD84009D4D6A /* CashMachineTests */,
 				04967BEE1BE8FD83009D4D6A /* Products */,
@@ -88,6 +89,10 @@
 			children = (
 				04967BF01BE8FD83009D4D6A /* AppDelegate.h */,
 				04967BF11BE8FD83009D4D6A /* AppDelegate.m */,
+				04967C151BE8FEE9009D4D6A /* CashMachine.h */,
+				04967C161BE8FEE9009D4D6A /* CashMachine.m */,
+				04967C211BE95DA5009D4D6A /* CashViewController.h */,
+				04967C221BE95DA5009D4D6A /* CashViewController.m */,
 				04967BF61BE8FD83009D4D6A /* ViewController.h */,
 				04967BF71BE8FD83009D4D6A /* ViewController.m */,
 				04967BFC1BE8FD84009D4D6A /* Assets.xcassets */,
@@ -160,6 +165,9 @@
 		04967BE51BE8FD83009D4D6A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					CashView,
+				);
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = popov;
 				TargetAttributes = {
@@ -220,6 +228,7 @@
 				04967BF81BE8FD83009D4D6A /* ViewController.m in Sources */,
 				04967BF51BE8FD83009D4D6A /* main.m in Sources */,
 				04967BF21BE8FD83009D4D6A /* AppDelegate.m in Sources */,
+				04967C231BE95DA5009D4D6A /* CashViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

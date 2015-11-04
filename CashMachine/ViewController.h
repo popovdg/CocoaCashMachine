@@ -12,7 +12,9 @@
 @property (weak) IBOutlet NSButtonCell *getCashButton;
 @property (weak) IBOutlet NSTextField *cashField;
 @property (weak) IBOutlet NSTextField *valuesField;
+@property (nonatomic) NSString* message;
 - (IBAction)getCash:(id)sender;
 - (void)controlTextDidChange:(NSNotification *)notification;
+- (void)prepareForSegue:(NSStoryboardSegue*) segue sender: (id)sender;
 @end
 

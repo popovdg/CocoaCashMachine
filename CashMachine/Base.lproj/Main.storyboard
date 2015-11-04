@@ -111,7 +111,7 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" title="Cash machine" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
@@ -125,10 +125,10 @@
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
-        <!--View Controller-->
+        <!--Cash machine-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
+                <viewController title="Cash machine" id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" identifier="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="270" height="92"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -151,7 +151,7 @@
                                             <textField identifier="values" toolTip="Values of notes in cash machine" verticalHuggingPriority="750" placeholderIntrinsicWidth="166" placeholderIntrinsicHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="aKC-9a-GPc">
                                                 <rect key="frame" x="64" y="0.0" width="166" height="22"/>
                                                 <animations/>
-                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" toolTip="Values of bank notes in cash machine" title="100 50 20 10" drawsBackground="YES" id="VbW-je-GdN">
+                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" toolTip="Values of bank notes in cash machine" title="100$ 50$ 20$ 10$" drawsBackground="YES" id="VbW-je-GdN">
                                                     <font key="font" metaFont="system"/>
                                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -194,9 +194,6 @@
                                                     <accessibility identifier="cash"/>
                                                 </textFieldCell>
                                                 <accessibility identifier="cash"/>
-                                                <connections>
-                                                    <action selector="getCash:" target="XfG-lQ-9wD" id="mRo-Yp-JqY"/>
-                                                </connections>
                                             </textField>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" placeholderIntrinsicWidth="9" placeholderIntrinsicHeight="17" translatesAutoresizingMaskIntoConstraints="NO" id="1os-rf-Qnx">
                                                 <rect key="frame" x="155" y="0.0" width="13" height="17"/>
@@ -249,11 +246,63 @@
                         <outlet property="cashField" destination="Xp5-ao-wef" id="fM0-0c-Ky5"/>
                         <outlet property="getCashButton" destination="i61-m3-N0I" id="uYd-3E-4od"/>
                         <outlet property="valuesField" destination="aKC-9a-GPc" id="ast-ST-8Vi"/>
+                        <segue destination="Q2a-1x-WuJ" kind="modal" identifier="cashSegue" id="0wU-qc-mRQ"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="580"/>
+        </scene>
+        <!--Cash-->
+        <scene sceneID="iMG-3V-TAG">
+            <objects>
+                <viewController title="Cash" identifier="CashBoard" storyboardIdentifier="CashBoard" id="Q2a-1x-WuJ" customClass="CashViewController" sceneMemberID="viewController">
+                    <view key="view" id="OeE-cP-6N5">
+                        <rect key="frame" x="0.0" y="0.0" width="474" height="323"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" ambiguous="YES" misplaced="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G9q-hM-IXc">
+                                <rect key="frame" x="20" y="103" width="200" height="200"/>
+                                <subviews>
+                                    <textField identifier="messageField" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="xDa-Cy-ZeI">
+                                        <rect key="frame" x="-2" y="0.0" width="204" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="Ck5-zI-mNZ"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="f6j-bb-dEx"/>
+                                        </constraints>
+                                        <animations/>
+                                        <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" id="jVz-zC-OtX">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                        <accessibility identifier="messageField"/>
+                                    </textField>
+                                </subviews>
+                                <animations/>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="G9q-hM-IXc" firstAttribute="top" relation="greaterThanOrEqual" secondItem="OeE-cP-6N5" secondAttribute="top" constant="20" symbolic="YES" id="GIx-CR-Db3"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="G9q-hM-IXc" secondAttribute="bottom" constant="20" symbolic="YES" id="KuF-Rf-xaB"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="G9q-hM-IXc" secondAttribute="trailing" constant="20" symbolic="YES" id="N2z-8d-Uis"/>
+                            <constraint firstItem="G9q-hM-IXc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="OeE-cP-6N5" secondAttribute="leading" constant="20" symbolic="YES" id="W3g-J2-nAQ"/>
+                        </constraints>
+                        <animations/>
+                    </view>
+                    <connections>
+                        <outlet property="messageField" destination="xDa-Cy-ZeI" id="IAL-ZK-ng7"/>
+                    </connections>
+                </viewController>
+                <customObject id="tMv-xL-uBI" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="72" y="941.5"/>
         </scene>
     </scenes>
 </document>

@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "CashMachine.h"
 
 @interface CashMachineTests : XCTestCase
 

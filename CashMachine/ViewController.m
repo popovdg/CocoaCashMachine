@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "CashViewController.h"
 #import "CashMachine.h"
 
 @implementation ViewController
@@ -27,10 +28,18 @@
 - (IBAction)getCash:(id)sender {
     if(![[self.valuesField stringValue] length]) return;
     if(!([[self.cashField stringValue] length] && [self.cashField intValue])) return;
-    NSSet* values = [[NSSet alloc] initWithArray: [[self.valuesField stringValue] componentsSeparatedByString:@" "]];
-    for(id item in values) if(![item isKindOfClass:[NSNumber class]]) return;
+    NSSet* values = [[NSSet alloc] initWithArray:
+                      [[self.valuesField stringValue] componentsSeparatedByString:@" "]];
     CashMachine* cashMachine = [[CashMachine alloc] initWithDenominators: values];
-    [cashMachine getCash: [self.cashField intValue]];
+    [self setMessage: [[cashMachine getCash: [self.cashField intValue]] componentsJoinedByString: @" "]];
+    [self performSegueWithIdentifier:@"cashSegue" sender:self];
+}
+
+- (void)prepareForSegue:(NSStoryboardSegue*) segue sender: (id)sender {
+    if ([[segue identifier] isEqualToString:@"cashSegue"]) {
+        CashViewController* cashViewController = [segue destinationController];
+        [cashViewController setMessage: [[self message] stringByAppendingString: @" "]];
+    }
 }
 
 - (void)controlTextDidChange:(NSNotification *)notification {

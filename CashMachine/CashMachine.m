@@ -18,14 +18,11 @@
 
 //Set values
 - (void) setDenominations: (NSSet*) denominations {
-    _denominations = [[[[denominations allObjects]
-                        filteredArrayUsingPredicate:
-                        [NSPredicate predicateWithFormat:@"self isKindOfClass: %@", [NSNumber class]]]
-                       
+    
+    _denominations = [[[[denominations valueForKey: @"integerValue"] allObjects]
                        filteredArrayUsingPredicate:
                        [NSPredicate predicateWithBlock:
-                        ^BOOL(id evaluatedObject, NSDictionary *bindings) {return [evaluatedObject boolValue];}]]
-                      
+                        ^BOOL(id evaluatedObject, NSDictionary *bindings) {return [evaluatedObject intValue];}]]
                       sortedArrayUsingDescriptors:
                       [NSArray arrayWithObject:
                        [NSSortDescriptor sortDescriptorWithKey: nil
