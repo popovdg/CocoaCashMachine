@@ -41,7 +41,19 @@
     }
     
     CashMachine* cashMachine = [[CashMachine alloc] initWithDenominators: values];
-    [self setMessage: [[cashMachine getCash: cash] componentsJoinedByString: @" "]];
+    NSArray* result = [cashMachine getCash: cash];
+    if(![result count]) [self setMessage: @"Sorry, no bank notes avilable to give the cash."];
+    NSArray* denominations = [cashMachine denominations];
+    
+    if([result count] == [denominations count])
+    {
+        NSMutableString* answer = [[NSMutableString alloc] initWithString: @"Here is your cash:\n"];
+        for(long long i = 0; i < (long long)[result count]; ++i)
+            if([result[i] boolValue])[answer appendFormat: @"%@ x %@$\n", result[i], denominations[i]];
+        [self setMessage: answer];
+    }
+    else [self setMessage: @"Sorry, error occured."];
+    
     [self performSegueWithIdentifier:@"cashSegue" sender:self];
 }
 

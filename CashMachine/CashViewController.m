@@ -17,8 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do view setup here.
-    if([self message]) [[self messageField] setStringValue: [self message]];
-    else [[self messageField] setStringValue: @"Sorry, no bank notes avilable to give the cash."];
+    [[self messageField] setStringValue: [self message]];
 }
 
 @end
