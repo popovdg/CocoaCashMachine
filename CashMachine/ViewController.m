@@ -26,9 +26,12 @@
 }
 
 - (IBAction)getCash:(id)sender {
-    NSArray* values = [[self.valuesField stringValue] componentsSeparatedByString:@" "];
     int cash = [self.cashField intValue];
-    
+    NSArray* values = [[[self.valuesField stringValue] componentsSeparatedByString:@" "]
+                       filteredArrayUsingPredicate:
+                       [NSPredicate predicateWithBlock:
+                        ^BOOL(id evaluatedObject, NSDictionary *bindings) {return [evaluatedObject intValue];}]];
+
     if(![values count]) {
         [self setMessage: @"Sorry, no bank notes in cash machine."];
         [self performSegueWithIdentifier:@"cashSegue" sender:self];
