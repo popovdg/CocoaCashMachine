@@ -14,22 +14,23 @@
 
 /** Cash machine */
 @interface CashMachine : NSObject {
-    NSArray* _denominations; /**< values of bank notes in cash machine */
     NSArray* result; /**< numbers of bank notes to be ejected */
 }
+
+@property (nonatomic, setter=setDenominations:) NSArray* denominations; /**< values of bank notes in cash machine */
 
 /**
  Initialize with array of values
  @param denominations a set of values
  @returns self
  */
-- (id) initWithDenominators: (NSSet*) denominations;
+- (id) initWithDenominators: (NSArray*) denominations;
 
 /**
  Set values
- @param denominations set of values
+ @param denominations array of values
  */
-- (void) setDenominations: (NSSet*) denominations;
+- (void) setDenominations: (NSArray*) denominations;
 
 /**
  Calculate bank notes to be ejected and save to 'result'

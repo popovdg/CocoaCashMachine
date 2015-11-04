@@ -11,15 +11,15 @@
 @implementation CashMachine
 
 //Initialize with array of values
-- (id)initWithDenominators: (NSSet*) denominations {
+- (id)initWithDenominators: (NSArray*) denominations {
     if(self = [super init]) [self setDenominations: denominations];
     return self;
 }
 
 //Set values
-- (void) setDenominations: (NSSet*) denominations {
+- (void) setDenominations: (NSArray*) denominations {
     
-    _denominations = [[[[denominations valueForKey: @"integerValue"] allObjects]
+    _denominations = [[[[[NSSet alloc] initWithArray:[denominations valueForKey: @"integerValue"]] allObjects]
                        filteredArrayUsingPredicate:
                        [NSPredicate predicateWithBlock:
                         ^BOOL(id evaluatedObject, NSDictionary *bindings) {return [evaluatedObject intValue];}]]
