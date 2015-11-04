@@ -45,9 +45,13 @@
     
     CashMachine* cashMachine = [[CashMachine alloc] initWithDenominators: values];
     NSArray* result = [cashMachine getCash: cash];
-    if(![result count]) [self setMessage: @"Sorry, no bank notes avilable to give the cash."];
-    NSArray* denominations = [cashMachine denominations];
+    if(![result count]) {
+        [self setMessage: @"Sorry, no bank notes avilable to give the cash."];
+        [self performSegueWithIdentifier:@"cashSegue" sender:self];
+        return;
+    }
     
+    NSArray* denominations = [cashMachine denominations];
     if([result count] == [denominations count])
     {
         NSMutableString* answer = [[NSMutableString alloc] initWithString: @"Here is your cash:\n"];
