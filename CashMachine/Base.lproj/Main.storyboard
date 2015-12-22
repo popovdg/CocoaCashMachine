@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9059"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
         <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
     </dependencies>
     <scenes>
@@ -141,7 +141,6 @@
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" placeholderIntrinsicWidth="56" placeholderIntrinsicHeight="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Ph-Dw-ctf">
                                                 <rect key="frame" x="-2" y="5" width="60" height="17"/>
-                                                <animations/>
                                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Values $:" id="IED-eQ-Sgv">
                                                     <font key="font" metaFont="system"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -150,7 +149,6 @@
                                             </textField>
                                             <textField identifier="values" toolTip="Values of notes in cash machine" verticalHuggingPriority="750" placeholderIntrinsicWidth="166" placeholderIntrinsicHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="aKC-9a-GPc">
                                                 <rect key="frame" x="64" y="0.0" width="166" height="22"/>
-                                                <animations/>
                                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" toolTip="Values of bank notes in cash machine" title="100$ 50$ 20$ 10$" drawsBackground="YES" id="VbW-je-GdN">
                                                     <font key="font" metaFont="system"/>
                                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -158,7 +156,6 @@
                                                 </textFieldCell>
                                             </textField>
                                         </subviews>
-                                        <animations/>
                                         <visibilityPriorities>
                                             <integer value="1000"/>
                                             <integer value="1000"/>
@@ -173,7 +170,6 @@
                                         <subviews>
                                             <button verticalHuggingPriority="750" placeholderIntrinsicWidth="82" placeholderIntrinsicHeight="21" translatesAutoresizingMaskIntoConstraints="NO" id="wNZ-RJ-BHi">
                                                 <rect key="frame" x="-6" y="-7" width="94" height="32"/>
-                                                <animations/>
                                                 <buttonCell key="cell" type="push" title="Get cash" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" identifier="getButton" imageScaling="proportionallyDown" inset="2" id="i61-m3-N0I">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system"/>
@@ -185,7 +181,6 @@
                                             </button>
                                             <textField identifier="cash" toolTip="Cash to ejected" verticalHuggingPriority="750" placeholderIntrinsicWidth="59" placeholderIntrinsicHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Xp5-ao-wef">
                                                 <rect key="frame" x="90" y="0.0" width="59" height="22"/>
-                                                <animations/>
                                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" toolTip="Cash to be ejected" identifier="cash" drawsBackground="YES" id="Afj-H0-sd1">
                                                     <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="mUS-Bx-C8f"/>
                                                     <font key="font" metaFont="system"/>
@@ -197,7 +192,6 @@
                                             </textField>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" placeholderIntrinsicWidth="9" placeholderIntrinsicHeight="17" translatesAutoresizingMaskIntoConstraints="NO" id="1os-rf-Qnx">
                                                 <rect key="frame" x="155" y="0.0" width="13" height="17"/>
-                                                <animations/>
                                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="$" id="inj-M4-lmv">
                                                     <font key="font" metaFont="system"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -205,7 +199,6 @@
                                                 </textFieldCell>
                                             </textField>
                                         </subviews>
-                                        <animations/>
                                         <visibilityPriorities>
                                             <integer value="1000"/>
                                             <integer value="1000"/>
@@ -218,7 +211,6 @@
                                         </customSpacing>
                                     </stackView>
                                 </subviews>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="QPE-bn-Dyg"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="52" id="cKe-lA-412"/>
@@ -239,7 +231,6 @@
                             <constraint firstAttribute="bottom" secondItem="stX-le-Nkg" secondAttribute="bottom" constant="20" id="g2u-oH-e1q"/>
                             <constraint firstAttribute="trailing" secondItem="stX-le-Nkg" secondAttribute="trailing" constant="20" id="zcN-Ll-o9B"/>
                         </constraints>
-                        <animations/>
                         <accessibility identifier="view"/>
                     </view>
                     <connections>
@@ -270,7 +261,6 @@
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="Ck5-zI-mNZ"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="f6j-bb-dEx"/>
                                         </constraints>
-                                        <animations/>
                                         <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" id="jVz-zC-OtX">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -279,7 +269,6 @@
                                         <accessibility identifier="messageField"/>
                                     </textField>
                                 </subviews>
-                                <animations/>
                                 <visibilityPriorities>
                                     <integer value="1000"/>
                                 </visibilityPriorities>
@@ -294,7 +283,6 @@
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="G9q-hM-IXc" secondAttribute="trailing" constant="20" symbolic="YES" id="N2z-8d-Uis"/>
                             <constraint firstItem="G9q-hM-IXc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="OeE-cP-6N5" secondAttribute="leading" constant="20" symbolic="YES" id="W3g-J2-nAQ"/>
                         </constraints>
-                        <animations/>
                     </view>
                     <connections>
                         <outlet property="messageField" destination="xDa-Cy-ZeI" id="IAL-ZK-ng7"/>

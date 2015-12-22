@@ -11,18 +11,18 @@
 @implementation CashMachine
 
 //Initialize with array of values
-- (id)initWithDenominators: (NSArray*) denominations {
+- (id)initWithDenominators: (NSArray<NSString *>*) denominations {
     if(self = [super init]) [self setDenominations: denominations];
     return self;
 }
 
 //Set values
-- (void) setDenominations: (NSArray*) denominations {
+- (void) setDenominations: (NSArray<NSString *>*) denominations {
     
     _denominations = [[[[[NSSet alloc] initWithArray:[denominations valueForKey: @"integerValue"]] allObjects]
                        filteredArrayUsingPredicate:
                        [NSPredicate predicateWithBlock:
-                        ^BOOL(id evaluatedObject, NSDictionary *bindings) {return [evaluatedObject intValue];}]]
+                        ^BOOL(id evaluatedObject, NSDictionary *bindings) {return [evaluatedObject integerValue];}]]
                       sortedArrayUsingDescriptors:
                       [NSArray arrayWithObject:
                        [NSSortDescriptor sortDescriptorWithKey: nil
@@ -34,7 +34,7 @@
 - (int) sum: (NSArray*) notes {
     int s = 0;
     if([notes count] == [_denominations count])
-        for(int i = 0; i < (long long)[notes count]; ++i) s += [notes[i] intValue] * [_denominations[i] intValue];
+        for(NSInteger i = 0; i < [notes count]; ++i) s += [notes[i] integerValue] * [_denominations[i] integerValue];
     return s;
 }
 
@@ -45,15 +45,15 @@
     int notesDenominations = 0;
     int resultDenominations = 0;
     
-    for(long long i = 0; i < (long long)[notes count]; ++i)
+    for(NSInteger i = 0; i < [notes count]; ++i)
         if([notes[i] boolValue]) {
             ++notesDenominations;
-            notesCount += [notes[i] intValue];
+            notesCount += [notes[i] integerValue];
         }
-    for(long long i = 0; i < (long long)[result count]; ++i)
+    for(NSInteger i = 0; i < [result count]; ++i)
         if([result[i] boolValue]) {
             ++resultDenominations;
-            resultCount += [result[i] intValue];
+            resultCount += [result[i] integerValue];
         }
 
     if(notesDenominations > resultDenominations ||
@@ -64,9 +64,10 @@
 //Calculate bank notes to be ejected and save to 'result'
 - (void) calculateNotes: (NSMutableArray*) notes startIndex: (long long) s cash: (int) cash {
     if([notes count] == [_denominations count])
-        for(long long i = s; i < (long long)[notes count]; ++i) {
-            [notes replaceObjectAtIndex: i withObject: @([notes[i] integerValue] + (cash - [self sum: notes]) / [_denominations[i] integerValue])];
-            for(int j = [notes[i] intValue]; j >= 0; --j) {
+        for(NSInteger i = s; i < [notes count]; ++i) {
+            [notes replaceObjectAtIndex: i withObject: @([notes[i] integerValue] +
+            (cash - [self sum: notes]) / [_denominations[i] integerValue])];
+            for(NSInteger j = [notes[i] integerValue]; j >= 0; --j) {
                 [notes replaceObjectAtIndex: i withObject: @(j)];
                 if(!(cash - [self sum: notes])) [self updateResult: notes];
                 if(s + 1 < (long long) [notes count]) [self calculateNotes: notes startIndex: s + 1 cash: cash];
@@ -78,7 +79,7 @@
 - (NSArray*) getCash: (int) cash {
     result = nil;
     NSMutableArray* notes = [[NSMutableArray alloc] initWithCapacity: [_denominations count]];
-    for(unsigned long i = 0; i < (unsigned long)[_denominations count]; ++i) [notes addObject: @0];
+    for(NSInteger i = 0; i < [_denominations count]; ++i) [notes addObject: @0];
     [self calculateNotes: notes startIndex: 0 cash: cash];
     if([self sum: result] == cash) return result;
     else return nil;
